@@ -2,6 +2,12 @@ Basic App template.
 
 I use this boiler plate to quickly test code in an Android app...
 
+* Branch info
+** master - Basic boilerplate java app
+** jni - master with a basic JNI interface
+** service - master with a android service
+** servicewithjni - service with a JNI interface  
+
 To setup build:
 android update project -t 1 -s -p .
  
@@ -12,4 +18,5 @@ To install:
 ant debug install
 
 leecam@chromium.org
+service code cribbed from rsesek@chromium.org
 
