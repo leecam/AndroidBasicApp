@@ -4,6 +4,7 @@
       android:versionCode="1"
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
+    <permission android:name="ServicePerm" android:protectionLevel="signature" />
     <application android:label="Basic App"
                  android:debuggable="true">
         <activity android:name=".BasicAppActivity">
@@ -12,5 +13,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".BasicAppService"
+                 android:process=":BasicAppService"
+                 android:isolatedProcess="false"
+                 android:permission="ServicePerm"
+                 android:exported="false" />
     </application>
 </manifest>
