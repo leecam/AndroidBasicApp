@@ -1,0 +1,10 @@
+Basic App template.
+
+To setup build:
+android update project -t 1 -s -p .
+ 
+To build:
+ant debug
+
+To install:
+ant debug install
