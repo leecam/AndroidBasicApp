@@ -1,4 +1,4 @@
-package org.leeecs.basic_app;
+package org.leecam.basic_app;
 
 import android.app.Activity;
 import android.os.Bundle;
