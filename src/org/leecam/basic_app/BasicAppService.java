@@ -14,6 +14,8 @@ public class BasicAppService extends Service {
 
   static final int MSG_SAY_HELLO = 1;
 
+  private native void sayHello();
+
   @Override
   public void onCreate() {
     Log.i(TAG,"BasicAppService Created");
@@ -25,6 +27,7 @@ public class BasicAppService extends Service {
       switch (msg.what) {
         case MSG_SAY_HELLO:
           Log.i(TAG, "MSG_SAY_HELLO");
+          sayHello();
           break;
         default:
           super.handleMessage(msg);
@@ -38,5 +41,9 @@ public class BasicAppService extends Service {
   public IBinder onBind(Intent intent) {
     Log.i(TAG,"BasicAppService Binding");
     return mMessenger.getBinder();
+  }
+
+  static {
+    System.loadLibrary("native-lib");
   }
 }
