@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 public class BasicAppActivity extends Activity {
   public static final String TAG = "BasicAppActivity";
 
+  private native void sayHello();
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -27,11 +29,16 @@ public class BasicAppActivity extends Activity {
       @Override
       public void onClick(View v) {
         Log.d(TAG, "Button Clicked");
+        sayHello();
       }
     });
 
     // Add button to view
     contentView.addView(simpleButton);
+  }
+
+  static {
+    System.loadLibrary("native-lib");
   }
 
 }
