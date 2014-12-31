@@ -1,5 +1,7 @@
 Basic App template.
 
+I use this boiler plate to quickly test code in an Android app...
+
 To setup build:
 android update project -t 1 -s -p .
  
@@ -8,3 +10,6 @@ ant debug
 
 To install:
 ant debug install
+
+leecam@chromium.org
+
