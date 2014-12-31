@@ -4,6 +4,9 @@ I use this boiler plate to quickly test code in an Android app...
 
 To setup build:
 android update project -t 1 -s -p .
+
+To build jni:
+/path/to/ndk/ndk_build
  
 To build:
 ant debug
